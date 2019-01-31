@@ -37,9 +37,12 @@ class TabItem {
   }
 
   select() {
-    // Select all ".tabs-item" elements from the DOM
-    // Remove the class "tabs-item-selected" from each element
-    // Add a class named "tabs-item-selected" to this element
+   // Select all ".tabs-item" elements from the DOM
+   const items = document.querySelectorAll('.tabs-item');
+   // Remove the class "tabs-item-selected" from each element
+   Array.from(items).forEach(item => item.classList.remove('tabs-item-selected'));
+   // Add a class named "tabs-item-selected" to this element
+   this.element.classList.add('tabs-item-selected');
   }
 }
 
