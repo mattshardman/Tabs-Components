@@ -7,8 +7,11 @@
 @import './mixins.less';
 @import '../components/Dropdown/Dropdown.less';
 @import '../components/Tabs/Tabs.less';
+@import '../components/Carocel/Carocel.less';
 
-
+::-webkit-scrollbar { 
+  display: none; 
+}
 
 body {
 	box-sizing: border-box;
@@ -24,7 +27,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;  
-  background-color: @lambda-red;
+  background-color: #fff;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   .header {
     height: 50px;
@@ -34,19 +37,14 @@ body {
 
 
 .section {
-  width: 70%;
+  width: 900px;
+  max-width: 90%;
   margin: 45px auto;
   display: flex;
-  box-shadow: 0px 3px 35px rgba(0,0,0,0.2);
+  box-shadow: 0px 3px 45px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  border: 1px #eaeaea solid;
   overflow: hidden;
-  .box {
-    padding: 40px;
-    .box-title {
-      font-size: 24px;
-      padding-bottom: 10px;
-      font-weight: bold;
-    }
-  }
 }
 
 

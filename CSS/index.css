@@ -4,12 +4,13 @@
   padding: 0;
 }
 .dropdown {
+  z-index: 100;
   position: absolute;
   left: 0;
 }
 .dropdown .dropdown-button {
   padding: 20px 35px;
-  color: #ffffff;
+  color: #000;
   border: none;
   font-weight: bold;
   cursor: pointer;
@@ -65,18 +66,18 @@
 }
 .tabs {
   width: 100%;
+  min-height: 400px;
 }
 .tabs .tabs-items {
   width: 100%;
-  height: 300px;
+  min-height: 400px;
   display: flex;
   justify-content: flex-start;
-  padding-left: 5%;
-  padding-top: 40px;
+  padding: 30px 5%;
 }
 .tabs .tabs-item {
   display: none;
-  width: 75%;
+  width: 100%;
 }
 .tabs .tabs-item .tabs-item-title {
   font-size: 24px;
@@ -88,6 +89,7 @@
 }
 .tabs .tabs-links {
   display: flex;
+  overflow: scroll;
   background-color: #931d25;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -99,16 +101,84 @@
   border-bottom: 3px transparent solid;
   transition: border-bottom 500ms;
 }
-.tabs .tabs-link:hover {
-  background-color: #be2530;
-}
 .tabs .tabs-link-selected {
   color: #fff;
   z-index: 2;
   border-bottom: 3px solid #fff;
 }
-.tabs .tabs-link-selected:hover {
-  background-color: #be2530;
+.carocel {
+  width: 900px;
+  max-width: 90%;
+  margin: 60px auto;
+  display: flex;
+  box-shadow: 0px 3px 45px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  border-radius: 10px;
+  position: relative;
+  height: 500px;
+}
+.carocel #move-left {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  z-index: 5;
+}
+.carocel .nav-button {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+.carocel .nav-button:hover {
+  color: #ddd;
+}
+.carocel #move-right {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  z-index: 5;
+  cursor: pointer;
+}
+.carocel .box {
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  transform: translateX(100%);
+  flex-direction: column;
+  padding: 20px;
+  cursor: pointer;
+  transition: transform 500ms;
+  background: white;
+  background-size: cover;
+  background-position: center;
+}
+.carocel .box-left {
+  transform: translateX(-100%);
+}
+.carocel .box-selected {
+  transform: translateX(0%);
+}
+.carocel .box-right {
+  transform: translateX(100%);
+}
+.carocel .box[data-box="1"] {
+  background-image: url("https://www.cbc.ca/kidscbc2/content/the_feed//pigsbestpets_lead.jpg");
+}
+.carocel .box[data-box="2"] {
+  background-image: url("https://www.hearingdogs.org.uk/globalassets/sponsor/jade/sponsor-hearing-dog-puppy-jade-4-600-x-377.jpg");
+}
+.carocel .box[data-box="3"] {
+  background-image: url("https://www.catster.com/wp-content/uploads/2017/12/A-gray-kitten-meowing.jpg");
+}
+::-webkit-scrollbar {
+  display: none;
 }
 body {
   box-sizing: border-box;
@@ -123,24 +193,19 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #931d25;
+  background-color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 .header-container .header {
   height: 50px;
 }
 .section {
-  width: 70%;
+  width: 900px;
+  max-width: 90%;
   margin: 45px auto;
   display: flex;
-  box-shadow: 0px 3px 35px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 3px 45px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  border: 1px #eaeaea solid;
   overflow: hidden;
-}
-.section .box {
-  padding: 40px;
-}
-.section .box .box-title {
-  font-size: 24px;
-  padding-bottom: 10px;
-  font-weight: bold;
 }
