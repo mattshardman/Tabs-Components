@@ -6,11 +6,13 @@ class Dropdown {
     
     // Get the element with the ".dropdown-button" class found in the dropdown element (look at the HTML for context)
     this.button = this.element.querySelector('.dropdown-button');
+    this.closeButton = this.element.querySelector('.close-btn');
     
     // assign the reference to the ".dropdown-content" class found in the dropdown element
     this.content = this.element.querySelector('.dropdown-content');
     // Add a click handler to the button reference and call the toggleContent method.
     this.button.addEventListener('click', () => this.toggleContent());
+    this.closeButton.addEventListener('click', () => this.toggleContent());
   }
 
   toggleContent() {
