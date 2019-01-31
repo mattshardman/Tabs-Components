@@ -106,7 +106,7 @@
   z-index: 2;
   border-bottom: 3px solid #fff;
 }
-.carocel {
+.carousel {
   width: 900px;
   max-width: 90%;
   margin: 60px auto;
@@ -117,13 +117,13 @@
   position: relative;
   height: 500px;
 }
-.carocel #move-left {
+.carousel #move-left {
   position: absolute;
   top: 50%;
   left: 10px;
   z-index: 5;
 }
-.carocel .nav-button {
+.carousel .nav-button {
   height: 50px;
   width: 50px;
   border-radius: 50%;
@@ -134,17 +134,17 @@
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
   cursor: pointer;
 }
-.carocel .nav-button:hover {
+.carousel .nav-button:hover {
   color: #ddd;
 }
-.carocel #move-right {
+.carousel #move-right {
   position: absolute;
   top: 50%;
   right: 10px;
   z-index: 5;
   cursor: pointer;
 }
-.carocel .box {
+.carousel .box {
   height: 100%;
   top: 0;
   left: 0;
@@ -159,22 +159,22 @@
   background-size: cover;
   background-position: center;
 }
-.carocel .box-left {
+.carousel .box-left {
   transform: translateX(-100%);
 }
-.carocel .box-selected {
+.carousel .box-selected {
   transform: translateX(0%);
 }
-.carocel .box-right {
+.carousel .box-right {
   transform: translateX(100%);
 }
-.carocel .box[data-box="1"] {
+.carousel .box[data-box="1"] {
   background-image: url("https://www.cbc.ca/kidscbc2/content/the_feed//pigsbestpets_lead.jpg");
 }
-.carocel .box[data-box="2"] {
+.carousel .box[data-box="2"] {
   background-image: url("https://www.hearingdogs.org.uk/globalassets/sponsor/jade/sponsor-hearing-dog-puppy-jade-4-600-x-377.jpg");
 }
-.carocel .box[data-box="3"] {
+.carousel .box[data-box="3"] {
   background-image: url("https://www.catster.com/wp-content/uploads/2017/12/A-gray-kitten-meowing.jpg");
 }
 ::-webkit-scrollbar {
