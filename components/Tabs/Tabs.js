@@ -47,7 +47,6 @@ class TabItem {
 }
 
 /* START HERE: 
-
 - Select all classes named ".tabs-link" and assign that value to the links variable
 - With your selection in place, now chain a .forEach() method onto the links variable to iterate over the DOM NodeList
 
