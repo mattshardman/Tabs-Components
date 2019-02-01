@@ -1,0 +1,81 @@
+.carousel {
+    width: 900px;
+    max-width: 90%;
+    margin: 60px auto;
+    display: flex;
+    box-shadow: 0px 3px 45px rgba(0,0,0,0.2);
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+    height: 500px;
+
+    #move-left {
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        z-index:5;
+    }
+
+    .nav-button {
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 3px 6px rgba(0,0,0,.2);
+        cursor: pointer;
+        &:hover {
+            color: #ddd;
+        }
+    }
+
+    #move-right {
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        z-index:5;
+        cursor: pointer;
+    }
+
+    .box {
+        height: 100%;
+        top: 0;
+        left: 0;
+        position: absolute;
+        width: 100%;
+        transform: translateX(100%);
+        flex-direction: column;
+        padding: 20px;
+        cursor: pointer;
+        transition: transform 500ms;
+        background: white;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .box-left {
+        transform: translateX(-100%);
+    }
+
+    .box-selected {
+        transform: translateX(0%);
+    }
+
+    .box-right {
+        transform: translateX(100%);
+    }
+
+    .box[data-box="1"] {
+        background-image: url("https://www.cbc.ca/kidscbc2/content/the_feed//pigsbestpets_lead.jpg");
+    }
+    
+    .box[data-box="2"] {
+        background-image: url("https://www.hearingdogs.org.uk/globalassets/sponsor/jade/sponsor-hearing-dog-puppy-jade-4-600-x-377.jpg");
+    }
+
+    .box[data-box="3"] {
+        background-image: url("https://www.catster.com/wp-content/uploads/2017/12/A-gray-kitten-meowing.jpg");
+    }
+}

@@ -3,41 +3,56 @@
 	<head>
 		<title>Advanced Components</title>
 		<link rel="stylesheet" href="./CSS/index.css">
+		<link
+		href="https://fonts.googleapis.com/icon?family=Material+Icons"
+		rel="stylesheet"
+	  />
+	  <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet" />
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	</head>
 	<body>
 		<script defer="defer" src="./components/Dropdown/Dropdown.js"></script>
 		<script defer="defer" src="./components/Tabs/Tabs.js"></script>
+		<script defer="defer" src="./components/Carousel/Carousel.js"></script>
 		
 		<div class="header-container">
 			<div class="dropdown">
-				<div class="dropdown-button">Dropdown</div>
+				<div class="dropdown-button">
+					<i class="material-icons">menu</i>
+				</div>
 				<div class="dropdown-content dropdown-hidden">
+					<div class="menu-close"><i class="material-icons close-btn">close</i></div>
 					<a class="dropdown-link" href="https://lambdaschool.com/" target="_blank">Lambda</a>
 					<a class="dropdown-link" href="https://www.google.com/" target="_blank">Google</a>
 					<a class="dropdown-link" href="https://developer.mozilla.org/en-US/" target="_blank">MDN</a>
 				</div>
 			</div>
-			<img src="./lambda_logo_light_small.png" class="header" />
+			<img src="https://cdn-images-1.medium.com/fit/c/120/120/1*iTABE417EkZDwRv9Uj91Qg.png" class="header" />
+			
 		</div>
 
-		<div class="section">
-			<div class="box">
-				<div class="box-title">Box Title 1</div>
-				<div class="box-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce risus nibh, gravida nec felis quis, facilisis facilisis lectus. Nulla ac orci pretium, condimentum orci quis, accumsan nisi. Aliquam erat volutpat. Curabitur cursus mattis libero, at viverra risus hendrerit quis. Fusce imperdiet tristique tortor non tincidunt. Mauris accumsan urna nec augue feugiat porta. Proin vitae magna in ex malesuada laoreet eget a nulla. Aliquam tristique et elit at consequat. In hac habitasse platea dictumst.</div>
+		<div class="carousel">
+			<div id="move-left" class="nav-button"><i class="material-icons">arrow_back</i></div>
+			<div class="box box-selected" data-box="1">
+	
 			</div>
-			<div class="box">
-				<div class="box-title">Box Title 2</div>
-				<div class="box-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce risus nibh, gravida nec felis quis, facilisis facilisis lectus. Nulla ac orci pretium, condimentum orci quis, accumsan nisi. Aliquam erat volutpat. Curabitur cursus mattis libero, at viverra risus hendrerit quis. Fusce imperdiet tristique tortor non tincidunt. Mauris accumsan urna nec augue feugiat porta. Proin vitae magna in ex malesuada laoreet eget a nulla. Aliquam tristique et elit at consequat. In hac habitasse platea dictumst.</div>
+			<div class="box box-right" data-box="2">
+		
 			</div>
+			<div class="box box-right" data-box="3">
+			
+				</div>
+			<div id="move-right" class="nav-button"><i class="material-icons">arrow_forward</i></div>
 		</div>
 
 		<div class="section">
 				<div class="tabs">
 					<div class="tabs-links">
-						<div class="tabs-link tabs-link-selected" data-tab="1">Tab 1</div>
-						<div class="tabs-link" data-tab="2">Tab 2</div>
-						<div class="tabs-link" data-tab="3">Tab 3</div>
-						<div class="tabs-link" data-tab="4">Tab 4</div>
+						<div class="tabs-link tabs-link-selected" data-tab="1">TAB 1</div>
+						<div class="tabs-link" data-tab="2">TAB 2</div>
+						<div class="tabs-link" data-tab="3">TAB 3</div>
+						<div class="tabs-link" data-tab="4">TAB 4</div>
+						<div class="tabs-link" data-tab="5">TAB 5</div>
 					</div>
 					<div class="tabs-items">
 						<div class="tabs-item tabs-item-selected" data-tab="1">
@@ -66,6 +81,14 @@
 						</div>
 						<div class="tabs-item" data-tab="4">
 							<div class="tabs-item-title">Quote 4</div>
+							<div class="tabs-item-description">
+								There is a theory which states that if ever anyone discovers exactly what the Universe is for and why it is here, it will
+								instantly disappear and be replaced by something even more bizarre and inexplicable. There is another theory which states
+								that this has already happened.
+							</div>
+						</div>
+						<div class="tabs-item" data-tab="5">
+							<div class="tabs-item-title">Quote 5</div>
 							<div class="tabs-item-description">
 								There is a theory which states that if ever anyone discovers exactly what the Universe is for and why it is here, it will
 								instantly disappear and be replaced by something even more bizarre and inexplicable. There is another theory which states
